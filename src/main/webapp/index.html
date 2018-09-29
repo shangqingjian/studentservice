@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>菜鸟教程</title>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+
+<body>
+	<button onclick="doWork()">Test Query</button>
+
+	<script>
+		function doWork() {
+			$.ajax({
+				type : "get",
+				url : "student/query/by-page",
+				contentType: "application/json",
+				success : function(data) {
+					alert("OK");
+				}
+			});
+		}
+	</script>
+</body>
+
+</html>
